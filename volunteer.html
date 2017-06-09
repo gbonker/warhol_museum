@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> 
+		<meta charset="utf-8" /> <!-- Specifies the character encoding for the HTML document -->
+		<meta name="author" content="Professor Quesenberry">
+		<meta name="keywords" content="Carnegie Mellon University, Andy Warhol, exhibit">
+		<meta name="description" content="The Exhibit: Andy Warhol: A Carnegie Mellon Inspiration">
+		<title>Volunteer: Andy Warhol: A Carnegie Mellon Inspiration</title>
+		
+		<!-- Link to CSS -->
+		<link href="css/basic.css" rel="stylesheet" type="text/css" />
+
+		<!-- Link Javascript Files -->
+		<script src="js/jquery-2.0.3.min.js" type="text/javascript"></script>
+		<script src="js/jquery.validate.js" type="text/javascript"></script>
+
+		<script>
+		  $(document).ready(function(){
+		    $("#contact_form").validate();
+		  });
+		</script>
+		
+	</head>	
+	<body>
+		<div id="wrapper">
+		<div id="header">
+		<header> <!-- The header tag should be used as a container for introductory content or set of navigational links. -->
+		  	<h1>Volunteer</h1>
+		  	<h2>at the Exhibit</h2>
+		</header>
+		</div>
+		
+		<div id="navigation">
+		<nav>
+		  	<a href="index.html">Home</a> |
+		  	<a href="biography.html">Biography</a> |
+		  	<a href="art.html">Art</a> |
+		  	<a href="exhibit.html">Exhibit</a> |
+		  	<a href="volunteer.html">Volunteer</a>
+		  	<!-- This anchor takes us to another page within the site; hence it is called a relative link. -->
+		</nav>
+		</div>
+		
+		<div id="main">
+		
+		<h3>Volunteer at the Gallery</h3>
+		
+		<p>Thank you for your interest in volunteering at the exhibit! Please 
+			fill out the form below and the Miller Gallery will contact you with
+			more information.</p>
+		
+		<p><em>Fields marked with an * are required</em></p><br />
+
+		 	<form id="contact_form" name="contact_form" action="http://www.andrew.cmu.edu/cgi-bin/mailto" method="post" enctype="plain/text">
+				<input name="MailTo" type="hidden" value="jeriaq@andrew.cmu.edu" />
+
+				<label for="fname">First Name * </label>
+				<input type="text" name="fname" id="fname" class="required"/>
+				<br /><br />
+				<label for="lname">Last Name * </label>
+				<input type="text" name="lname" id="lname" class="required"/>
+				<br /><br />
+				<label for="email">Email * </label>
+				<input type="text" name="email" id="email" class="required email"/>
+				<br /><br />
+				<label for="state">State </label>
+				<input type="text" name="state" id="state"/>
+				<br /><br />
+				<label for"zip">Zip Code </label>
+				<input type="text" name="zip" id="zip" size=”6" minlength="5" maxlength="5" digits="true" />	
+				<br /><br />
+				<label for="comment">How would you like to help? * </label><br />
+				<textarea name="comment" id="comment" rows="7" cols="40" class="required" />
+				</textarea>
+				<br /><br />
+			
+				<input type="submit" value="Submit" />
+		
+			</form>
+		</div>
+		
+	</body>
+	<footer>
+  		<hr />
+  		<p>2013 Copyright Andy Warhol Museum and Miller Gallery at Carnegie
+  			Mellon University. All Rights Reserved.</p>
+	</footer>
+  	</div>
+</html>
